@@ -32,3 +32,9 @@
     font-family: 'Satisfy', cursive;
     font-size: xx-large !important;
 }
+
+.dropdown-item{
+    padding: 1rem 1.5rem !important;
+    width: 150% !important;
+    font-size: xx-large;
+}
