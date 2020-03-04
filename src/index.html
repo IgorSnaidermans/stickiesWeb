@@ -5,43 +5,86 @@
     <title>Stickies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
     </style>
+    <script src="scripts.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img class="app-img" src="media/note.png"> Stickies app</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#"><img class="menu-img" src="media/plus.png"> Add note</a>
+                <a class="nav-link" href="#"><i class="fa fa-plus-square"></i> Add note</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><img class="menu-img" src="media/bin.png">Delete all notes</a>
+                <a class="nav-link" href="#"><i class="fa fa-trash"></i> Delete all notes</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="menu-img" src="media/paintbrush.png"> Color
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-paint-brush"></i> Color
                 </a>
                 <div class="dropdown-menu color-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item stickie-blue" href="#">Blue</a>
-                    <a class="dropdown-item stickie-yellow" href="#">Yellow</a>
-                    <a class="dropdown-item stickie-black" href="#">Black</a>
+                    <a class="dropdown-item dropdown-blue" href="#">Blue</a>
+                    <a class="dropdown-item dropdown-yellow" href="#">Yellow</a>
+                    <a class="dropdown-item dropdown-black" href="#">Black</a>
                 </div>
             </li>
         </ul>
 
     </div>
 </nav>
+
+<div class="stickie-container stickie-blue">
+    <div class="trash stickie-blue-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
+    <div class="stickie-title stickie-blue-title">Blue</div>
+    <div class="move stickie-blue-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
+    <div class="content"><p id="stickie-content-text">privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza</p></div>
+</div>
+
+<div class="stickie-container stickie-yellow">
+    <div class="trash stickie-yellow-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
+    <div class="stickie-title stickie-yellow-title">Scroll</div>
+    <div class="move stickie-yellow-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
+    <div class="content"><p id="stickie-content-text">privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza
+        privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza</p></div>
+</div>
+
+<div class="stickie-container stickie-black">
+    <div class="trash stickie-black-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
+    <div class="stickie-title stickie-black-title">Google fonts</div>
+    <div class="move stickie-black-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
+    <div class="content"><p id="stickie-content-text">privet kak dela kak pogoda azazaza mne nravatsa nogi tvoi i glaza</p></div>
+</div>
 
 </body>
 </html>

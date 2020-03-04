@@ -1,40 +1,155 @@
-.stickie-blue{
+.dropdown-blue {
     background-color: rgb(16, 204, 255) !important;
 }
 
-.stickie-black{
+.dropdown-black {
     background-color: black !important;
-    color:white !important;
+    color: white !important;
 }
 
-.stickie-yellow{
+.dropdown-yellow {
     background-color: rgb(254, 233, 106) !important;
 }
 
-.color-menu{
+.color-menu {
     padding: 0rem 0px !important;
 }
 
-.menu-img{
+.menu-img {
     margin-bottom: 7px;
 }
 
-.app-img{
-    width: 35%;
-    height: 35%;
+.app-img {
+    width: 60px;
+    height: 60px;
 }
 
-.nav-link{
+.nav-link {
     font-size: x-large;
 }
 
-.navbar-brand{
-    font-family: 'Satisfy', cursive;
-    font-size: xx-large !important;
+.navbar{
+    box-shadow: 0px 25px 40px 0px rgba(196,168,196,0.69);
 }
 
-.dropdown-item{
-    padding: 1rem 1.5rem !important;
-    width: 150% !important;
-    font-size: xx-large;
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+    font-size: x-large !important;
+}
+
+.dropdown-item {
+    padding: 0.2rem 1rem !important;
+    font-size: large;
+}
+
+.dropdown-menu{
+    background-color: #fff0 !important;
+}
+
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+}
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.stickie {
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px 40px 8px 40px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'header header header ' 'lsidebar content rsidebar' 'footer footer footer ';
+}
+
+.stickie-blue-title {
+    background-color: rgb(128, 230, 255);
+}
+
+.stickie-blue {
+    background-color: rgb(16, 204, 255);
+}
+
+.stickie-yellow-title {
+    background-color: rgb(255, 244, 181);
+}
+
+.stickie-yellow {
+    background-color: rgb(254, 233, 106);
+}
+
+.stickie-black-title {
+    background-color: rgb(128, 128, 128);
+}
+
+.stickie-black {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.stickie-container {
+    font-family: arial, sans-serif;
+    border: 1px solid black;
+    width: 285px;
+    height: 285px;
+    border-radius: 8px 38px 8px 20px;
+    display: grid;
+    grid-template-columns: 0.2fr 10fr 2.2fr 0fr;
+    grid-template-rows: 0.3fr 46fr 1fr;
+    grid-template-areas: "trash title move ." "content content content ." ". . . .";
+}
+
+.trash {
+    border-top-left-radius: 8px;
+    grid-area: trash;
+}
+
+.stickie-title {
+    grid-area: title;
+    text-align: center;
+    font-size: x-large;
+}
+
+.move {
+    border-top-right-radius: 40px;
+    grid-area: move;
+}
+
+.content {
+    overflow: scroll;
+    grid-area: content;
+}
+
+#stickie-content-text{
+    padding: 0px 0px 0px 23px;
+}
+
+#stickie-control-icon{
+    color:black;
+    font-size: 32px;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+::-webkit-scrollbar {
+    opacity: 100%;
+    width:0px;
+}
+
+body{
+    height:100%;
+    width:100%;
+    background-color: grey !important;
 }
