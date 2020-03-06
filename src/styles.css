@@ -59,12 +59,8 @@
     color:black !important;
 }
 
-#mydiv {
-    position: absolute;
-    z-index: 9;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
-    text-align: center;
+#stickieIds {
+
 }
 
 #mydivheader {
@@ -112,6 +108,8 @@
 
 
 .stickie-container {
+    position: absolute;
+    z-index: 9;
     font-family: arial, sans-serif;
     border: 1px solid black;
     width: 285px;
@@ -149,6 +147,7 @@
 }
 
 #stickie-control-icon{
+    cursor: move;
     color:black;
     font-size: 32px;
     margin-top: 2px;

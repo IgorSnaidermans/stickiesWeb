@@ -30,9 +30,9 @@
 <body>
 
 <script>
-    $(document).ready(function(){
-        $(".remove-stickies").click(function(){
-            deleteAllNotes();
+    $(document).ready(function () {
+        $(".remove-stickies").click(function () {
+            deleteAllStickies();
         });
     });
 </script>
@@ -48,14 +48,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link stickie-counter" href="#" ><i class="fa fa-sticky-note"><script>stickieCounter()</script></i>
-                    </a>
+                <a class="nav-link stickie-counter" href="#"><i class="fa fa-sticky-note">
+                    <script>stickieCounter()</script>
+                </i>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="addNewStickie()"><i class="fa fa-plus-square"></i> Add note</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link remove-stickies" href="#"><i class="fa fa-trash" onclick="deleteAllNotes()"></i> Delete all notes</a>
+                <a class="nav-link remove-stickies" href="#"><i class="fa fa-trash" onclick="deleteAllStickies()"></i>
+                    Delete all notes</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -63,46 +66,18 @@
                     <i class="fa fa-paint-brush"></i> Color
                 </a>
                 <div class="dropdown-menu color-menu" aria-labelledby="navbarDropdown">
-                    <button class="dropdown-item dropdown-blue" href="#" onclick="changeNewStickieColor(1)">Blue</button>
-                    <button class="dropdown-item dropdown-yellow" href="#" onclick="changeNewStickieColor(2)">Yellow</button>
-                    <button class="dropdown-item dropdown-black" href="#" onclick="changeNewStickieColor(3)">Black</button>
+                    <button class="dropdown-item dropdown-blue" href="#" onclick="changeNewStickieColor(1)">Blue
+                    </button>
+                    <button class="dropdown-item dropdown-yellow" href="#" onclick="changeNewStickieColor(2)">Yellow
+                    </button>
+                    <button class="dropdown-item dropdown-black" href="#" onclick="changeNewStickieColor(3)">Black
+                    </button>
                 </div>
             </li>
         </ul>
 
     </div>
 </nav>
-
-<div class="stickie-container stickie-blue" id="privet">
-    <div class="trash stickie-blue-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
-    <div class="stickie-title stickie-blue-title">Blue</div>
-    <div class="move stickie-blue-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
-    <div class="content"><p id="stickie-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        pellentesque pellentesque ligula.</p></div>
-</div>
-
-<div class="stickie-container stickie-yellow">
-    <div class="trash stickie-yellow-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
-    <div class="stickie-title stickie-yellow-title">Scroll</div>
-    <div class="move stickie-yellow-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
-    <div class="content"><p id="stickie-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        pellentesque pellentesque ligula. Aliquam erat volutpat. Pellentesque tincidunt, urna vitae molestie sagittis,
-        dui erat mattis massa, eget elementum est ante consectetur ipsum. Etiam quis scelerisque enim. Etiam ut urna
-        ante. Phasellus nec facilisis lectus. Donec egestas enim sed vulputate sodales. Vestibulum ut vehicula purus.
-        Ut blandit ex sit amet leo lobortis pharetra. Nulla facilisi. Morbi semper orci ut velit venenatis, et vehicula
-        turpis porttitor. Proin ultrices suscipit enim. Sed gravida commodo imperdiet. Fusce tincidunt arcu eu magna
-        vulputate, pellentesque vulputate ex volutpat. Aenean viverra, massa at bibendum laoreet, nunc odio fermentum
-        eros, non ultrices tellus tortor et ex./p></div>
-</div>
-
-<div class="stickie-container stickie-black">
-    <div class="trash stickie-black-title"><i class="fa fa-ban" id="stickie-control-icon"></i></div>
-    <div class="stickie-title stickie-black-title">Google fonts</div>
-    <div class="move stickie-black-title"><i class="fa fa-arrows" id="stickie-control-icon"></i></div>
-    <div class="content"><p id="stickie-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        pellentesque pellentesque ligula.</p></div>
-</div>
-
 
 
 
