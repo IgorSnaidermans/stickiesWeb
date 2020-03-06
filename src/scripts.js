@@ -1,45 +1,52 @@
-//Make the DIV element draggagle:
-/*dragElement(document.getElementById("mydiv"));*/
-dragElement($("#mydiv"));
+let newStickieColor=1;
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
+function stickieCounter() {
+    $(document).ready(function () {
+        $(".fa-sticky-note").html(' ' + $('.stickie-container').length);
+    });
 }
 
+function changeNewStickieColor(colorNumber) {
+        if (colorNumber === 1) {
+            newStickieColor = 1;
+        } else if (colorNumber === 2) {
+            newStickieColor = 2;
+        } else if (colorNumber === 3) {
+            newStickieColor = 3;
+        }
+    }
+
+function deleteAllNotes(){
+$(".stickie-container").remove();
+    stickieCounter();
+}
+
+function addNewStickie(){
+    if(newStickieColor===1){
+        $("nav").after("<div class=\"stickie-container stickie-blue\">\n" +
+            "    <div class=\"trash stickie-blue-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"stickie-title stickie-blue-title\">Blue</div>\n" +
+            "    <div class=\"move stickie-blue-title\"><i class=\"fa fa-arrows\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
+            "        pellentesque pellentesque ligula.</p></div>\n" +
+            "</div>");
+    }else if(newStickieColor===2){
+        $("nav").after("<div class=\"stickie-container stickie-yellow\">\n" +
+            "    <div class=\"trash stickie-yellow-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"stickie-title stickie-yellow-title\">Scroll</div>\n" +
+            "    <div class=\"move stickie-yellow-title\"><i class=\"fa fa-arrows\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
+            "        pellentesque pellentesque ligula. </p></div>\n" +
+            "</div>");
+    } else if(newStickieColor===3){
+        $("nav").after("<div class=\"stickie-container stickie-black\">\n" +
+            "    <div class=\"trash stickie-black-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"stickie-title stickie-black-title\">Google fonts</div>\n" +
+            "    <div class=\"move stickie-black-title\"><i class=\"fa fa-arrows\" id=\"stickie-control-icon\"></i></div>\n" +
+            "    <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
+            "        pellentesque pellentesque ligula.</p></div>\n" +
+            "</div>");
+
+    }
+    stickieCounter();
+}
