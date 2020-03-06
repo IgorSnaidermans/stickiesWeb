@@ -152,6 +152,7 @@
     border-radius:inherit;
     background-color: inherit;
     width: -webkit-fill-available;
+    width: -moz-available;
     height: 244px;
 }
 
