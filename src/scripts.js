@@ -10,10 +10,13 @@ function stickieCounter() {
 function changeNewStickieColor(colorNumber) {
         if (colorNumber === 1) {
             newStickieColor = "blue";
+            $("#paintBrushIcon").css("color","rgb(16, 204, 255)");
         } else if (colorNumber === 2) {
             newStickieColor = "yellow";
+            $("#paintBrushIcon").css("color", "rgb(245,224,101)");
         } else if (colorNumber === 3) {
             newStickieColor = "black";
+            $("#paintBrushIcon").css("color", "black");
         }
     }
 

@@ -19,6 +19,10 @@
     margin-bottom: 7px;
 }
 
+#paintBrushIcon{
+    color: rgb(16, 204, 255);
+}
+
 .app-img {
     width: 60px;
     height: 60px;
