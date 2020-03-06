@@ -114,7 +114,7 @@
     border: 1px solid black;
     width: 285px;
     height: 285px;
-    border-radius: 8px 38px 8px 20px;
+    border-radius: 8px 38px 8px 0px;
     display: grid;
     grid-template-columns: 0.2fr 10fr 2.2fr 0fr;
     grid-template-rows: 0.3fr 46fr 1fr;
@@ -138,12 +138,17 @@
 }
 
 .content {
-    overflow: scroll;
     grid-area: content;
 }
 
 #stickie-content-text{
-    padding: 0px 0px 0px 23px;
+    resize: none;
+    border:none;
+    padding: 0px 10px 0px 10px;
+    border-radius:inherit;
+    background-color: inherit;
+    width: -webkit-fill-available;
+    height: 247px;
 }
 
 #stickie-move-icon{
@@ -179,13 +184,7 @@
     color: #c30000;
 }
 
-::-webkit-scrollbar {
-    opacity: 100%;
-    width:0px;
-}
-
 body{
-    height:100%;
-    width:100%;
+
     background-color: grey !important;
 }

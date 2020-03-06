@@ -37,8 +37,7 @@ function addNewStickie(){
             "        <div class=\"stickie-title stickie-blue-title\">Title</div>\n" +
             "        <div class=\"move stickie-blue-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
-            "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
-            "            pellentesque pellentesque ligula.</p></div>\n" +
+            "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
             "    </div>");
     }else if(newStickieColor==="yellow"){
         $("nav").after("<div class=\"stickie-container stickie-yellow\" id=\""+stickieIdCounter+"\">\n" +
@@ -46,8 +45,7 @@ function addNewStickie(){
             "        <div class=\"stickie-title stickie-yellow-title\">Title</div>\n" +
             "        <div class=\"move stickie-yellow-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
-            "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
-            "            pellentesque pellentesque ligula.</p></div>\n" +
+            "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
             "    </div>");
     } else if(newStickieColor==="black"){
         $("nav").after("<div class=\"stickie-container stickie-black\" id=\""+stickieIdCounter+"\">\n" +
@@ -55,8 +53,7 @@ function addNewStickie(){
             "        <div class=\"stickie-title stickie-black-title\">Title</div>\n" +
             "        <div class=\"move stickie-black-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
-            "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
-            "            pellentesque pellentesque ligula.</p></div>\n" +
+            "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
             "    </div>");
     }
 
