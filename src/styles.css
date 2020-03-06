@@ -106,6 +106,10 @@
     background-color: rgb(0, 0, 0);
 }
 
+#stickie-content-black{
+    color:white;
+}
+
 
 .stickie-container {
     position: absolute;
@@ -148,7 +152,14 @@
     border-radius:inherit;
     background-color: inherit;
     width: -webkit-fill-available;
-    height: 247px;
+    height: 244px;
+}
+
+#stickie-title-text{
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    width: 192px;
 }
 
 #stickie-move-icon{

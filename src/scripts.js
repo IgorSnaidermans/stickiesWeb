@@ -34,7 +34,7 @@ function addNewStickie(){
     if(newStickieColor==="blue"){
         $("nav").after("<div class=\"stickie-container stickie-blue\" id=\""+stickieIdCounter+"\">\n" +
             "        <div class=\"trash stickie-blue-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
-            "        <div class=\"stickie-title stickie-blue-title\">Title</div>\n" +
+            "        <div class=\"stickie-title stickie-blue-title\"><input type=\"text\" id=\"stickie-title-text\"></div>\n" +
             "        <div class=\"move stickie-blue-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
             "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
@@ -42,7 +42,7 @@ function addNewStickie(){
     }else if(newStickieColor==="yellow"){
         $("nav").after("<div class=\"stickie-container stickie-yellow\" id=\""+stickieIdCounter+"\">\n" +
             "        <div class=\"trash stickie-yellow-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
-            "        <div class=\"stickie-title stickie-yellow-title\">Title</div>\n" +
+            "        <div class=\"stickie-title stickie-yellow-title\"><input type=\"text\" id=\"stickie-title-text\"></div>\n" +
             "        <div class=\"move stickie-yellow-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
             "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
@@ -50,10 +50,10 @@ function addNewStickie(){
     } else if(newStickieColor==="black"){
         $("nav").after("<div class=\"stickie-container stickie-black\" id=\""+stickieIdCounter+"\">\n" +
             "        <div class=\"trash stickie-black-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
-            "        <div class=\"stickie-title stickie-black-title\">Title</div>\n" +
+            "        <div class=\"stickie-title stickie-black-title\"><input type=\"text\" id=\"stickie-title-text\" style='color:white'></div>\n" +
             "        <div class=\"move stickie-black-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
             "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
-            "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\"></textarea></div>\n" +
+            "        <div class=\"content\"><textarea type=\"text\" id=\"stickie-content-text\" style='color:white'></textarea></div>\n" +
             "    </div>");
     }
 
