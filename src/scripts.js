@@ -1,6 +1,5 @@
-let newStickieColor=1;
+let newStickieColor="blue";
 let stickieIdCounter=0;
-let itemIdToDrag;
 
 function stickieCounter() {
     $(document).ready(function () {
@@ -10,11 +9,11 @@ function stickieCounter() {
 
 function changeNewStickieColor(colorNumber) {
         if (colorNumber === 1) {
-            newStickieColor = 1;
+            newStickieColor = "blue";
         } else if (colorNumber === 2) {
-            newStickieColor = 2;
+            newStickieColor = "yellow";
         } else if (colorNumber === 3) {
-            newStickieColor = 3;
+            newStickieColor = "black";
         }
     }
 
@@ -23,31 +22,36 @@ $(".stickie-container").remove();
     stickieCounter();
 }
 
+function deleteStickie(stickieId){
+    $(".stickie-container#" + stickieId).remove();
+    stickieCounter();
+}
+
 function addNewStickie(){
-    if(newStickieColor===1){
+    if(newStickieColor==="blue"){
         $("nav").after("<div class=\"stickie-container stickie-blue\" id=\""+stickieIdCounter+"\">\n" +
-            "        <div class=\"trash stickie-blue-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "        <div class=\"trash stickie-blue-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
             "        <div class=\"stickie-title stickie-blue-title\">Title</div>\n" +
             "        <div class=\"move stickie-blue-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
-            "                                                                                  id=\"stickie-control-icon\"></i></div>\n" +
+            "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
             "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
             "            pellentesque pellentesque ligula.</p></div>\n" +
             "    </div>");
-    }else if(newStickieColor===2){
+    }else if(newStickieColor==="yellow"){
         $("nav").after("<div class=\"stickie-container stickie-yellow\" id=\""+stickieIdCounter+"\">\n" +
-            "        <div class=\"trash stickie-yellow-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "        <div class=\"trash stickie-yellow-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
             "        <div class=\"stickie-title stickie-yellow-title\">Title</div>\n" +
             "        <div class=\"move stickie-yellow-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
-            "                                                                                  id=\"stickie-control-icon\"></i></div>\n" +
+            "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
             "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
             "            pellentesque pellentesque ligula.</p></div>\n" +
             "    </div>");
-    } else if(newStickieColor===3){
+    } else if(newStickieColor==="black"){
         $("nav").after("<div class=\"stickie-container stickie-black\" id=\""+stickieIdCounter+"\">\n" +
-            "        <div class=\"trash stickie-black-title\"><i class=\"fa fa-ban\" id=\"stickie-control-icon\"></i></div>\n" +
+            "        <div class=\"trash stickie-black-title\"><i class=\"fa fa-ban\" id=\"stickie-remove-icon\" onclick=\"deleteStickie("+stickieIdCounter+")\"></i></div>\n" +
             "        <div class=\"stickie-title stickie-black-title\">Title</div>\n" +
             "        <div class=\"move stickie-black-title\" id=\"stickieMoveId "+stickieIdCounter+"\"><i class=\"fa fa-arrows\"\n" +
-            "                                                                                  id=\"stickie-control-icon\"></i></div>\n" +
+            "                                                                                  id=\"stickie-move-icon\"></i></div>\n" +
             "        <div class=\"content\"><p id=\"stickie-content-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n" +
             "            pellentesque pellentesque ligula.</p></div>\n" +
             "    </div>");

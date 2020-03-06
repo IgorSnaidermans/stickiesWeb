@@ -59,10 +59,6 @@
     color:black !important;
 }
 
-#stickieIds {
-
-}
-
 #mydivheader {
     padding: 10px;
     cursor: move;
@@ -146,12 +142,37 @@
     padding: 0px 0px 0px 23px;
 }
 
-#stickie-control-icon{
+#stickie-move-icon{
     cursor: move;
     color:black;
     font-size: 32px;
     margin-top: 2px;
     margin-left: 3px;
+}
+
+#stickie-move-icon:hover{
+    cursor: move;
+    color: #6e6cf9;
+}
+
+#stickie-move-icon:active{
+    cursor: grabbing;
+    color: #4b4c9f;
+}
+
+#stickie-remove-icon{
+    color:black;
+    font-size: 32px;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+#stickie-remove-icon:hover{
+    color:red;
+}
+
+#stickie-remove-icon:active{
+    color: #c30000;
 }
 
 ::-webkit-scrollbar {
